@@ -38,7 +38,7 @@ function Decoder(bytes, port) {
   var decoded = {};
   if (port === 8) {
     decoded.soilMoisture = (bytes[0] << 8) | bytes[1];
-    decoded.temp = ((bytes[2] << 8) | bytes[3]); // Assuming temperature was multiplied by 10 before sending
+    decoded.temp = ((bytes[2] << 8) | bytes[3]);
     decoded.humi = (bytes[4] << 8) | bytes[5];
     decoded.co2 = (bytes[6] << 8) | bytes[7];
     decoded.battery = (bytes[8] << 8) | bytes[9];
